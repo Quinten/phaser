@@ -29,6 +29,9 @@ var GetOverlapY = function (body1, body2, overlapOnly, bias)
         //  They overlap but neither of them are moving
         body1.embedded = true;
         body2.embedded = true;
+
+        body1.touching.none = false;
+        body2.touching.none = false;
     }
     else if (body1._dy > body2._dy)
     {
